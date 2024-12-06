@@ -38,7 +38,7 @@ function Header() {
           <FaMoon />
         </button>
         <Link to='/sign-in'>
-          <button className='bg-gradient-to-r from-purple-500 to-blue-500 text-white px-4 py-2 rounded-md'>
+          <button gradientDuoTone='purpletone' outline>
             Sign In
           </button>
         </Link>
