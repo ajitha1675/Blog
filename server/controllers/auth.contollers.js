@@ -2,7 +2,7 @@ import User from '../models/user.model.js'; // Adjust the path based on your fil
 import bcryptjs from 'bcryptjs';
 import { errorHandler } from '../utils/error.js';
 
-export const signup = async (req, res) => {
+export const signup = async (req, res, next) => {
    const { username, email, password } = req.body;
 
    // Validation
@@ -20,7 +20,7 @@ export const signup = async (req, res) => {
    const newUser = new User({
       username,
       email,
-      password,
+      password: hashedPassword,
    });
 
    try {
